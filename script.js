@@ -2,13 +2,24 @@ function getComputerChoice() {
     let randomNumber = Math.floor(Math.random() * 100);
 
     if (randomNumber > 0 && randomNumber < 33) {
-        console.log("Rock");
+        return "Rock";
     } else if (randomNumber > 33 && randomNumber < 66) {
-        console.log("Paper");
+        return "Paper";
     } else {
-        console.log("Scissor");
+        return "Scissor";
     }
 }
 
-getComputerChoice();
+function getHumanChoice() {
+    let userPrompt = prompt("Rock, Paper or Scissor?");   
 
+    if (userPrompt === "Rock" || userPrompt === "rock") {
+        return "Rock";
+    } else if (userPrompt === "Paper" || userPrompt === "paper") {
+        return "Paper";
+    } else if (userPrompt === "Scissor" || userPrompt === "scissor") {
+        return "Scissor";
+    } else {
+        return alert("INVALID INPUT");
+    }
+}
